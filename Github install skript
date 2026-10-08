@@ -4,4 +4,25 @@ ssh-keygen -t ed25519 -C "henri.antson@voco.ee"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 #kopeeri võti ja viska githubi
+#3) installi ja sea ülesse git linux masinas
+installi - apt-get install git
+git config --global user.name "Henri Antson"
+git config --global user.email henri.antson@voco.ee
+git config --global core.editor nano
 
+#4)kaustas tee:
+git init
+git remote add reponimi git@github.com:voconaator69/reponimi.git
+
+#5) kontrolli
+git remote -v
+
+#põhikasutamine:
+#a) pane faili jälgimisele:
+git add failinimi
+
+#b)lisa comment
+git commit -m "panin faili jälgimisele ja x"
+
+#c) lükka fail läbi
+git push -uf reponimi main
